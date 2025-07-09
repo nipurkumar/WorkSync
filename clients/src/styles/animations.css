@@ -1,0 +1,311 @@
+/* Additional animations for enhanced UI */
+
+/* Slide animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Fade animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scale animations */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/* Rotation animations */
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-180deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}
+
+@keyframes rotateOut {
+  from {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+}
+
+/* Utility animation classes */
+.animate-slideInFromLeft {
+  animation: slideInFromLeft 0.5s ease-out;
+}
+
+.animate-slideInFromRight {
+  animation: slideInFromRight 0.5s ease-out;
+}
+
+.animate-slideInFromTop {
+  animation: slideInFromTop 0.5s ease-out;
+}
+
+.animate-slideInFromBottom {
+  animation: slideInFromBottom 0.5s ease-out;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-fadeOut {
+  animation: fadeOut 0.5s ease-out;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.animate-fadeInDown {
+  animation: fadeInDown 0.5s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.3s ease-out;
+}
+
+.animate-scaleOut {
+  animation: scaleOut 0.3s ease-out;
+}
+
+.animate-rotateIn {
+  animation: rotateIn 0.5s ease-out;
+}
+
+.animate-rotateOut {
+  animation: rotateOut 0.5s ease-out;
+}
+
+/* Infinite animations */
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+/* Hover animations */
+.hover-float:hover {
+  animation: float 2s ease-in-out infinite;
+}
+
+.hover-wobble:hover {
+  animation: wobble 0.8s ease-in-out;
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: translateX(0%);
+  }
+  15% {
+    transform: translateX(-25px) rotate(-5deg);
+  }
+  30% {
+    transform: translateX(20px) rotate(3deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(10px) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-5px) rotate(-1deg);
+  }
+}
+
+/* Loading animations */
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    color: transparent;
+  }
+  40% {
+    color: white;
+  }
+  100% {
+    color: transparent;
+  }
+}
+
+.loading-dots span:nth-child(1) {
+  animation: dots 1.4s infinite;
+}
+.loading-dots span:nth-child(2) {
+  animation: dots 1.4s infinite 0.2s;
+}
+.loading-dots span:nth-child(3) {
+  animation: dots 1.4s infinite 0.4s;
+}
+
+/* Particle animations */
+@keyframes particles {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: fixed;
+  pointer-events: none;
+  animation: particles 10s linear infinite;
+}
+
+/* Stagger animations */
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+.stagger-5 {
+  animation-delay: 0.5s;
+}
+
+/* Responsive animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

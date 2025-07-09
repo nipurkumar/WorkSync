@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+dist/
+build/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# dotenv environment file
+.env
+.env.local
+
+
+# VS Code settings
+.vscode/
+
+# Cache
+.cache/
+.next/
+out/
+tmp/
+temp/
+
+# Test coverage
+coverage/
+
+# IDE files
+*.swp
+*.swo
+*.bak
+
+# Compiled JavaScript map files
+*.map
+
+# Misc
+*.log
+
+# Truffle specific (if using)
+truffle-config.js
+artifacts/
+contracts/build/
+contracts/deployments/
